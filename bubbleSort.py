@@ -11,4 +11,3 @@ def bubble_sort(data, drawData, timeTick):
                 time.sleep(timeTick)
 
     drawData(data, ['green' for k in range(len(data))])
-
