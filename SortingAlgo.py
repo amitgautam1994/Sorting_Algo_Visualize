@@ -3,12 +3,12 @@ from tkinter import *
 from tkinter import ttk
 from bubbleSort import bubble_sort
 from quickSort import quick_sort
+from mergeSort import merge_sort
 
 root = Tk()
 root.title('Sorting Algorithm Visualisation')
-# root.maxsize(900, 600)
-root.resizable(height=None, width=None)
-root.config(bg='black')
+root.maxsize(900, 600)
+root.config(bg='grey')
 
 # variables
 selected_alg = StringVar()
@@ -61,6 +61,9 @@ def startAlgorithm():
 
     elif algMenu.get() == 'Bubble Sort':
         bubble_sort(data, drawData, speedScale.get())
+
+    elif algMenu.get() == "Merge Sort":
+        merge_sort(data, drawData, speedScale.get())
 
 
 # frame / base lauout
